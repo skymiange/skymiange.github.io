@@ -157,9 +157,6 @@ article {
 	font-size: 20px;
 	text-align: center;
 }
-.table_width{
-	width: 800px;
-}
 .tr_color{
 	background-color: #ccc;
 	padding: 0; 
@@ -182,4 +179,10 @@ footer {
 	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
+}
+table {
+	width: 100%;
+	margin: 0 auto;
+	border-color: #ccc;
+	border-collapse: collapse;
 }
