@@ -14,7 +14,7 @@ body {
 .main {
 	width: 980px;
 	height: 1386px;
-	margin:0 auto;
+	margin: 0 auto;
 }
 
 .main .main-top {
@@ -48,8 +48,31 @@ body {
 	margin-right: 85px;
 }
 
+aside {
+	position: relative;
+	width: 892px;
+	height: 341px;
+}
+
 .main .shuiping_line {
 	width: 892px;
 	height: 2px;
 	background-color: #938ebc;
+}
+
+aside .mid_left {
+	width: 641px;
+	height: 301px;
+	background-color: #000;
+	margin-top: 40px;
+	position: absolute;
+}
+
+aside .mid_right {
+	width: 203px;
+	height: 301px;
+	position: absolute;
+	right: 0;
+	margin-top: 40px;
+	background-color: #333;
 }
