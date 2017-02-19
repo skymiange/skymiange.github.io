@@ -13,7 +13,7 @@ body {
 
 .container {
 	width: 892px;
-	height: 1386px;
+	height: 1450px;
 	margin: 0 auto;
 	background-color: #fff;
 	padding: 0 44px;
@@ -141,7 +141,7 @@ header .date {
 
 .two {
 	width: 641px;
-	margin: 0 0 270px 0;
+	margin: 0 0 250px 0;
 	background-color: #000;
 }
 
@@ -267,6 +267,7 @@ header .date {
 	float: right;
 	width: 458px;
 	height: 630px;
+	margin-top: 40px;
 }
 
 .wangtao_size {
@@ -274,11 +275,11 @@ header .date {
 	height: 275px;
 }
 
-.atr_right_bottom {
+.art_right_bottom {
 	width: 459px;
 	height: 318px;
-	background-color: gray;
-	margin-top: 80px;
+	margin-top: 30px;
+	background-color: #CCC;
 }
 
 .safe {
@@ -321,4 +322,122 @@ header .date {
 	left: 170px;
 	letter-spacing: 1.4px;
 	background-color: #72b16a;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #10456b;
+	display: inline-block;
+	position: absolute;
+	top: 55px;
+	left: 55px;
+}
+
+.triangle1 {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #10456b;
+	display: inline-block;
+	position: absolute;
+	top: 85px;
+	left: 55px;
+}
+
+.triangle2 {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #10456b;
+	display: inline-block;
+	position: absolute;
+	top: 115px;
+	left: 55px;
+}
+
+.mark_one {
+	height: 30px;
+	position: absolute;
+	top: 50px;
+	left: 85px;
+}
+
+.mark_one1 {
+	height: 30px;
+	position: absolute;
+	top: 80px;
+	left: 85px;
+}
+
+.mark_one2 {
+	height: 30px;
+	position: absolute;
+	top: 110px;
+	left: 85px;
+}
+
+.mark_word {
+	position: absolute;
+	top: 50px;
+	left: 295px;
+	font: italic 12px "Microsoft YaHei";
+}
+
+.mark_word1 {
+	top: 83px;
+	left: 295px;
+	position: absolute;
+	font: italic 12px "Microsoft YaHei";
+}
+
+.mark_word2 {
+	top: 114px;
+	left: 295px;
+	position: absolute;
+	font: italic 12px "Microsoft YaHei";
+}
+.square{
+	height: 160px;
+	width: 260px;
+	position: relative;
+	margin-top: 125px;
+	background-color: #DDD;
+	word-break: break-all;
+}
+.zui{
+	color: #5a5b5b;
+	font-size: 14px;
+	float: right;
+	height: 160px;
+	width: 180px;
+	margin-top: -160px;
+}
+.zui p{
+	font-size: 14px;
+	word-break: break-all;
+}
+.zui p span{
+	font-size: 34px;
+}
+.love{
+	position: absolute;
+	left: 60px;
+	top: 70px;
+font-size: 25px;
+}
+.ending hr{
+	border: 2px solid #938e8c;
+	width: 892px;
+}
+.ending{
+	position: relative;
+}
+.has{
+	position: absolute;
+	right: 0;
 }
