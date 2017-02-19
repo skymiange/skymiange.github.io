@@ -1,8 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
 body {
 	background-color: #44565C;
 	color: #767777;
@@ -11,69 +6,106 @@ body {
 	margin: 0 auto;
 }
 
-.main {
-	width: 980px;
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 892px;
 	height: 1386px;
 	margin: 0 auto;
+	background-color: #fff;
+	padding: 0 44px;
 }
 
-.main .main-top {
-	width: 980px;
-	height: 61px;
-}
-
-.main .main-top .un_square {
+header .ife_url {
 	width: 110px;
 	height: 61px;
-	background-color: #D62626;
+	background-color: #db3e75;
 	position: relative;
-	float: left;
 }
 
-.main .main-top .un_square .square_font {
-	font-size: 12px;
-	font-family: "黑体";
+header .ife_url p {
 	color: #fff;
 	position: absolute;
-	bottom: 5px;
-	left: 5px;
+	margin-left: 4px;
+	bottom: 2px;
 }
 
-.main .main-top  .right_date {
-	float: right;
-	font-size: 12px;
-	color: #d45d4c;
-	font-family: "黑体";
-	margin-top: 42px;
-	margin-right: 85px;
-}
-
-aside {
+header {
+	margin-bottom: 30px;
 	position: relative;
-	width: 892px;
-	height: 341px;
 }
 
-.main .shuiping_line {
-	width: 892px;
-	height: 2px;
-	background-color: #938ebc;
-}
-
-aside .mid_left {
-	width: 641px;
-	height: 301px;
-	background-color: #000;
-	margin-top: 40px;
-
+header .date {
+	color: #d45d5c;
+	font-family: "SimHei";
 	position: absolute;
+	right: 0px;
+	bottom: 5px;
 }
 
-aside .mid_right {
-	width: 203px;
-	height: 301px;
-	margin-top: 40px;
-	position: absolute;
-	margin-left:689px;
-	background-color: #333;
+.underline_one {
+	border: 2px #938e8c solid;
+	margin-top: 0;
 }
+.one{
+	position: relative;
+}
+.one_left .one_left_area{
+    width: 641px;
+    height: 301px;
+}
+.one_right{
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 203px;
+}
+.one_right hr{
+	border: 2px solid #cc8091;
+}
+.one_right h2{
+  color: #000;
+ font-family:'Microsoft YaHei';
+ text-decoration:underline;
+}
+.one_right>p{
+	font-family: 'STKaiti';
+	color: #676767;
+	margin-bottom: 10px;
+}
+.one_right .num{
+	font-family: '微软雅黑';
+	position: absolute;
+    font-size: 116px;
+    color: #75b86b;
+    top:100px;
+}
+.right_final{
+	position: relative;
+	font-family: "微软雅黑";
+}
+.right_final .flag1{
+  font-size: 55px;
+  	color: #cc8091;
+  	top: 150px;
+  	position: absolute;
+}
+.right_final .flag2{
+		color: #cc8091;
+		position: absolute;
+		top: 170px;
+		font-size: 21px;
+		right: 90px;
+}
+
+.right_final .flag3{
+		color: #cc8091;
+		font-size: 12px;
+		top: 195px;
+		right: 40px;
+		position: absolute;
+}
+
