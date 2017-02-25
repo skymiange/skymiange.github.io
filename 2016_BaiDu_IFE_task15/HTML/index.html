@@ -38,7 +38,14 @@ function getData() {
   /*
   coding here
   */
-
+    var ul=document.getElementById("source");
+    var data=[];
+     for (var i = 0; i < ul.childElementCount; i++){   //遍历li节点
+          var li=ul.children[i];  //li节点的内容
+          var city=li.innerHTML.split("空气质量: ")[0];//前面一半的城市名字 
+          var num=Number(li.children[0].innerHTML);  //b节点里面的内容
+          data.push([city,num]);
+     }
   /*
   data = [
     ["北京", 90],
@@ -58,8 +65,9 @@ function getData() {
  */
 function sortAqiData(data) {
     data.sort(function(a,b){
-        return a[1]-b[2];
+        return a[1]-b[1];
     });
+    return data;
 }    
 
 /**
@@ -68,7 +76,17 @@ function sortAqiData(data) {
  * 格式见ul中的注释的部分
  */
 function render(data) {
-
+     var ul=document.getElementById("resort");
+     var ulchildren="";
+    /*
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     */
+     for(var i=0;i<data.length;i++){
+          ulchildren+=
+     }
+     ul.innerHTML=ulchildren;
 }
 
 function btnHandle() {
