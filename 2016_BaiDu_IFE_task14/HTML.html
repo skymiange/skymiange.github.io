@@ -37,16 +37,16 @@ var aqiData = [
   });
   add.innerHTML="";
   var order=1;
+  var addli="";
   for(var i=aqiData.length-1;i>=0;i--){
   	 if(aqiData[i][1]>60){
-           var addli=document.createElement("li");
-           addli.innerHTML='第'+order+'名:'+aqiData[i][0]+','+aqiData[i][1];
-           add.appendChild(addli);
+           addli+='<li>第'+order+'名:'+aqiData[i][0]+','+aqiData[i][1]+'</li>';
            order++;
   	 }
   	 else
   	 	break;
   }
+    add.innerHTML=addli;
 })();
 
 </script>
