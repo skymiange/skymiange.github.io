@@ -42,7 +42,7 @@ function getData() {
     var data=[];
      for (var i = 0; i < ul.childElementCount; i++){   //遍历li节点
           var li=ul.children[i];  //li节点的内容
-          var city=li.innerHTML.split("空气质量: ")[0];//前面一半的城市名字 
+          var city=li.innerHTML.split("空气质量：")[0];//前面一半的城市名字 
           var num=Number(li.children[0].innerHTML);  //b节点里面的内容
           data.push([city,num]);
      }
@@ -84,7 +84,7 @@ function render(data) {
     <li>第三名：北京空气质量：<b>90</b></li>
      */
      for(var i=0;i<data.length;i++){
-          ulchildren+=
+          ulchildren+='<li>'+'第'+(i+1)+'名:'+data[i][0]+'空气质量: <b>'+data[i][1]+'</b></li>';
      }
      ul.innerHTML=ulchildren;
 }
@@ -93,15 +93,17 @@ function btnHandle() {
   var aqiData = getData();
   aqiData = sortAqiData(aqiData);
   render(aqiData);
+  var btn=document.getElementById("sort-btn");
+  btn.disabled=true;
 }
 
 
 function init() {
 
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数 
-  var click=document.getElementById("sort-btn").onclick(function(){
+  var click=document.getElementById("sort-btn").onclick=function(){
           btnHandle();
-  });
+  }
 }
 
 init();
