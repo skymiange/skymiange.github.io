@@ -13,7 +13,7 @@ var aqiData = {};
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-	var strCity = document.getElementById("aqi-city-input").value.trim(); 
+	var strCity = document.getElementById("aqi-city-input").value.trim();
 	//获取输入值并且去掉左右两边的空格
 	var strAir = document.getElementById("aqi-value-input").value.trim();
 	if (!strCity.match(/^[A-Za-z\u4E00-\u9FA5]+$/)) {
@@ -26,14 +26,31 @@ function addAqiData() {
 		alert("空气质量指数必须为整数！");
 		return;
 	}
-	aqiData[strCity]=strAir;
+	aqiData[strCity] = strAir;
 }
 
 /**
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-
+	var table = document.getElementById("aqi-table");
+	table.innerHTML = "";
+	for (var strCity in aqiData) {
+		if (table.children.length === 0) {
+			table.innerHTML = '<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>';
+		}
+		var tr = document.createElement("tr");
+		var td1 = document.createElement("td");
+		td1.innerHTML = strCity;
+		tr.appendChild(td1);
+		var td2 = document.createElement("td");
+		td2.innerHTML = aqiData[strCity];
+		tr.appendChild(td2);
+		var td3 = document.createElement("td");
+		td3.innerHTML = "<button class='del-btn'>删除</button>";
+		tr.appendChild(td3);
+		table.appendChild(tr);
+	}
 }
 
 /**
@@ -49,18 +66,30 @@ function addBtnHandle() {
  * 点击各个删除按钮的时候的处理逻辑
  * 获取哪个城市数据被删，删除数据，更新表格显示
  */
-function delBtnHandle() {
-	// do sth.
-
+function delBtnHandle(target) {
+	// do sth.		
+	var tr = target.parentElement.parentElement;
+	var strCity = tr.children[0].innerHTML;
+	delete aqiData[strCity];
 	renderAqiList();
 }
 
 function init() {
 
 	// 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-
+	var clickThing = document.getElementById("add-btn");
+	clickThing.onclick = addBtnHandle;
 	// 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+	var table = document.getElementById("aqi-table");
+	table.addEventListener("click", function(e) {
 
+		if (e.target && e.target.nodeName === "BUTTON") {
+
+			delBtnHandle(e.target);
+
+		}
+
+	});
 }
 
 init();
